@@ -1,7 +1,7 @@
 <template>
-    <v-app id="inspire">
+    <div id="inspire">
     <v-app-bar
-    app
+      app
       color="deep-blue"
       dark
     >
@@ -47,11 +47,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -60,7 +56,7 @@
       drawer: null,
       items: [
           { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/tarefas' },
-          { title: 'Form', icon: 'mdi-help-box', to:'form' },
+          { title: 'Form', icon: 'mdi-help-box', to:'/form/0' },
           { title: 'Login', icon: 'mdi-help-box', to:'login' },
         ],
     }), 

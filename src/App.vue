@@ -1,10 +1,11 @@
 <template>
-<div>
-  <navbar></navbar>
+
   <v-app>
-      <router-view/>
+    <navbar v-if="LoginPage"></navbar>
+    <router-view/>
   </v-app>
-</div>
+
+
 </template>
 
 <script>
@@ -16,5 +17,10 @@ export default {
     //
   }),
   components: {navbar},
+  computed:{
+    LoginPage(){
+      return this.$route.name !== 'login';
+    }
+  }
 };
 </script>

@@ -11,11 +11,17 @@ const routes = [
     component: () => import('../views/HomePage.vue')
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/login',
+    name: 'login',
   
-    component: () => import('../views/AboutView.vue')
-  }
+    component: () => import('../views/LoginView.vue')
+  },
+  {
+    path: '/form/:id',
+    name: 'form',
+  
+    component: () => import('../views/formView.vue')
+  },
 ]
 
 const router = new VueRouter({
